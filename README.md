@@ -1,4 +1,4 @@
-CAM_experiment
+cost_model_illustration
 ==============
 
 CAM output experiment map
