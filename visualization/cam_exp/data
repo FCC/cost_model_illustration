@@ -1,0 +1,121 @@
+/* This is where the data is called and styled. */
+/* Uncomment for use.                           */
+
+/* This is where the data is called and styled. */
+/* Uncomment for use. */  
+@unPop: #fff4f9; /*8*/
+
+@ServdAbove: #FFACA1;/*1*/
+@ServdBetween: #C4F489; /*2*/
+@ServdBelow: #FBDA62; /*3*/
+@UServdAbove: #DC4E3D; /*4*/
+@UServdBetween: #28925B; /*5*/
+@UServdBelow: #D99442; /*6*/ 
+
+@land: #727272;
+@water: #DEEDEF;
+@waterline: #4D8FB4;
+/*
+#exp_ply{
+  	[zoom<6]{
+	  	[myvalue = 1] {polygon-fill: @ServdAbove;}
+		[myvalue = 2] {polygon-fill: @ServdBetween;polygon-opacity: 0.8}
+ 		[myvalue = 3] {polygon-fill: @ServdBelow;polygon-opacity: 0.7}  
+ 		[myvalue = 4] {polygon-fill: @UServdAbove;}
+ 		[myvalue = 5] {polygon-fill: @UServdBetween;}
+ 		[myvalue = 6] {polygon-fill: @UServdBelow}
+   		}
+	[zoom=6]{
+	  	[myvalue = 1] {polygon-fill: @ServdAbove; polygon-opacity: 0.9}
+		[myvalue = 2] {polygon-fill: @ServdBetween;polygon-opacity: 0.7}
+ 		[myvalue = 3] {polygon-fill: @ServdBelow;polygon-opacity: 0.6} 
+ 		[myvalue = 4] {polygon-fill: @UServdAbove;polygon-opacity: 0.9}
+ 		[myvalue = 5] {polygon-fill: @UServdBetween;polygon-opacity: 0.9}
+ 		[myvalue = 6] {polygon-fill: @UServdBelow;polygon-opacity: 0.9}
+		}
+	[zoom=7]{
+	  	[myvalue = 1] {polygon-fill: @ServdAbove; polygon-opacity: 0.8}
+		[myvalue = 2] {polygon-fill: @ServdBetween;polygon-opacity: 0.6}
+ 		[myvalue = 3] {polygon-fill: @ServdBelow;polygon-opacity: 0.5} 
+ 		[myvalue = 4] {polygon-fill: @UServdAbove;polygon-opacity: 0.8}
+ 		[myvalue = 5] {polygon-fill: @UServdBetween;polygon-opacity: 0.8}
+ 		[myvalue = 6] {polygon-fill: @UServdBelow;polygon-opacity: 0.8}
+		}
+	[zoom=8]{
+	  	[myvalue = 1] {polygon-fill: @ServdAbove; polygon-opacity: 0.7}
+		[myvalue = 2] {polygon-fill: @ServdBetween;polygon-opacity: 0.5}
+ 		[myvalue = 3] {polygon-fill: @ServdBelow;polygon-opacity: 0.5} 
+ 		[myvalue = 4] {polygon-fill: @UServdAbove;polygon-opacity: 0.7}
+ 		[myvalue = 5] {polygon-fill: @UServdBetween;polygon-opacity: 0.7}
+ 		[myvalue = 6] {polygon-fill: @UServdBelow;polygon-opacity: 0.7}
+		}
+	[zoom=9]{
+	  	[myvalue = 1] {polygon-fill: @ServdAbove; polygon-opacity: 0.6}
+		[myvalue = 2] {polygon-fill: @ServdBetween;polygon-opacity: 0.5}
+ 		[myvalue = 3] {polygon-fill: @ServdBelow;polygon-opacity: 0.5} 
+ 		[myvalue = 4] {polygon-fill: @UServdAbove;polygon-opacity: 0.6}
+ 		[myvalue = 5] {polygon-fill: @UServdBetween;polygon-opacity: 0.6}
+ 		[myvalue = 6] {polygon-fill: @UServdBelow;polygon-opacity: 0.6}
+		}
+	[zoom>9]{
+	  	[myvalue = 1] {polygon-fill: @ServdAbove; polygon-opacity: 0.5}
+		[myvalue = 2] {polygon-fill: @ServdBetween;polygon-opacity: 0.4}
+ 		[myvalue = 3] {polygon-fill: @ServdBelow;polygon-opacity: 0.4} 
+ 		[myvalue = 4] {polygon-fill: @UServdAbove;polygon-opacity: 0.5}
+ 		[myvalue = 5] {polygon-fill: @UServdBetween;polygon-opacity: 0.5}
+ 		[myvalue = 6] {polygon-fill: @UServdBelow;polygon-opacity: 0.5}
+		}
+}*/
+
+#exp_non48_poly{
+  	[zoom<6]{
+	  	[myvalue = 1] {polygon-fill: @ServdAbove;}
+		[myvalue = 2] {polygon-fill: @ServdBetween;polygon-opacity: 0.8}
+ 		[myvalue = 3] {polygon-fill: @ServdBelow;polygon-opacity: 0.7}  
+ 		[myvalue = 4] {polygon-fill: @UServdAbove;}
+ 		[myvalue = 5] {polygon-fill: @UServdBetween;}
+ 		[myvalue = 6] {polygon-fill: @UServdBelow}
+   		}
+	[zoom=6]{
+	  	[myvalue = 1] {polygon-fill: @ServdAbove; polygon-opacity: 0.9}
+		[myvalue = 2] {polygon-fill: @ServdBetween;polygon-opacity: 0.7}
+ 		[myvalue = 3] {polygon-fill: @ServdBelow;polygon-opacity: 0.6} 
+ 		[myvalue = 4] {polygon-fill: @UServdAbove;polygon-opacity: 0.9}
+ 		[myvalue = 5] {polygon-fill: @UServdBetween;polygon-opacity: 0.9}
+ 		[myvalue = 6] {polygon-fill: @UServdBelow;polygon-opacity: 0.9}
+		}
+	[zoom=7]{
+	  	[myvalue = 1] {polygon-fill: @ServdAbove; polygon-opacity: 0.8}
+		[myvalue = 2] {polygon-fill: @ServdBetween;polygon-opacity: 0.6}
+ 		[myvalue = 3] {polygon-fill: @ServdBelow;polygon-opacity: 0.5} 
+ 		[myvalue = 4] {polygon-fill: @UServdAbove;polygon-opacity: 0.8}
+ 		[myvalue = 5] {polygon-fill: @UServdBetween;polygon-opacity: 0.8}
+ 		[myvalue = 6] {polygon-fill: @UServdBelow;polygon-opacity: 0.8}
+		}
+	[zoom=8]{
+	  	[myvalue = 1] {polygon-fill: @ServdAbove; polygon-opacity: 0.7}
+		[myvalue = 2] {polygon-fill: @ServdBetween;polygon-opacity: 0.5}
+ 		[myvalue = 3] {polygon-fill: @ServdBelow;polygon-opacity: 0.5} 
+ 		[myvalue = 4] {polygon-fill: @UServdAbove;polygon-opacity: 0.7}
+ 		[myvalue = 5] {polygon-fill: @UServdBetween;polygon-opacity: 0.7}
+ 		[myvalue = 6] {polygon-fill: @UServdBelow;polygon-opacity: 0.7}
+		}
+	[zoom=9]{
+	  	[myvalue = 1] {polygon-fill: @ServdAbove; polygon-opacity: 0.6}
+		[myvalue = 2] {polygon-fill: @ServdBetween;polygon-opacity: 0.5}
+ 		[myvalue = 3] {polygon-fill: @ServdBelow;polygon-opacity: 0.5} 
+ 		[myvalue = 4] {polygon-fill: @UServdAbove;polygon-opacity: 0.6}
+ 		[myvalue = 5] {polygon-fill: @UServdBetween;polygon-opacity: 0.6}
+ 		[myvalue = 6] {polygon-fill: @UServdBelow;polygon-opacity: 0.6}
+		}
+	[zoom>9]{
+	  	[myvalue = 1] {polygon-fill: @ServdAbove; polygon-opacity: 0.5}
+		[myvalue = 2] {polygon-fill: @ServdBetween;polygon-opacity: 0.4}
+ 		[myvalue = 3] {polygon-fill: @ServdBelow;polygon-opacity: 0.4} 
+ 		[myvalue = 4] {polygon-fill: @UServdAbove;polygon-opacity: 0.5}
+ 		[myvalue = 5] {polygon-fill: @UServdBetween;polygon-opacity: 0.5}
+ 		[myvalue = 6] {polygon-fill: @UServdBelow;polygon-opacity: 0.5}
+		}
+}
+
+
