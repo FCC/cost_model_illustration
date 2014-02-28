@@ -1,0 +1,89 @@
+{
+  "bounds": [
+    -161.543,
+    17.644,
+    -58.1836,
+    60.2398
+  ],
+  "center": [
+    -75.7041,
+    39.6543,
+    9
+  ],
+  "format": "png",
+  "interactivity": {
+    "layer": "camtract",
+    "template_teaser": "{{{tract}}} {{{state}}} {{{county_name}}} {{{total_locations}}} {{{total_annual_support}}} {{{pc_total_locations}}} {{{pc_locations_below}}} {{{pc_locations_between}}} {{{pc_telco_served_locations_between}}} {{{pc_telco_unserved_locations_between}}} {{{pc_locations_above_ttc}}} {{{pc_telco_servedlocations_above_ttc}}} {{{pc_telco_unserved_locations_above_ttc}}} {{{pc_annual_support}}} {{{ror_total_locations}}} {{{ror_locations_below}}} {{{ror_locations_between}}} {{{ror_telco_served_locations_between}}} {{{ror_telco_unserved_locations_etween}}} {{{ror_locations_above_ttc}}} {{{ror_telco_served_locations_above_ttc}}} {{{ror_telcounserved_locations_above_ttc}}} {{{ror_annual_support}}}",
+    "fields": [
+      "tract",
+      "state",
+      "county_name",
+      "total_locations",
+      "total_annual_support",
+      "pc_total_locations",
+      "pc_locations_below",
+      "pc_locations_between",
+      "pc_telco_served_locations_between",
+      "pc_telco_unserved_locations_between",
+      "pc_locations_above_ttc",
+      "pc_telco_servedlocations_above_ttc",
+      "pc_telco_unserved_locations_above_ttc",
+      "pc_annual_support",
+      "ror_total_locations",
+      "ror_locations_below",
+      "ror_locations_between",
+      "ror_telco_served_locations_between",
+      "ror_telco_unserved_locations_etween",
+      "ror_locations_above_ttc",
+      "ror_telco_served_locations_above_ttc",
+      "ror_telcounserved_locations_above_ttc",
+      "ror_annual_support",
+      "gid"
+    ]
+  },
+  "minzoom": 3,
+  "maxzoom": 12,
+  "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+  "Stylesheet": [
+    "style.mss"
+  ],
+  "Layer": [
+    {
+      "geometry": "polygon",
+      "extent": [
+        -179.147236,
+        14.110374,
+        179.77847,
+        71.39038000000001
+      ],
+      "Datasource": {
+        "type": "postgis",
+        "table": "(select gid, geom, tract, state, county_name, total_locations, round(total_annual_support,2) as total_annual_support, pc_total_locations, pc_locations_below, pc_locations_between, pc_telco_served_locations_between, pc_telco_unserved_locations_between, pc_locations_above_ttc, pc_telco_servedlocations_above_ttc, pc_telco_unserved_locations_above_ttc, round(pc_annual_support,2) as pc_annual_support, ror_total_locations, ror_locations_below, ror_locations_between, ror_telco_served_locations_between, ror_telco_unserved_locations_etween, ror_locations_above_ttc, ror_telco_served_locations_above_ttc, ror_telcounserved_locations_above_ttc, round(ror_annual_support,2) as ror_annual_support from analysis2014.cam_tract_ply) as camtract",
+        "key_field": "gid",
+        "geometry_field": "geom",
+        "extent_cache": "auto",
+        "extent": "-179.147236,14.110374,179.77847,71.39038",
+        "dbname": "FCCgis",
+        "host": "localhost",
+        "port": "5432",
+        "user": "postgres",
+        "id": "camtract",
+        "project": "camfeb2014_mouse",
+        "srs": "+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs"
+      },
+      "id": "camtract",
+      "class": "",
+      "srs-name": "WGS84",
+      "srs": "+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs",
+      "advanced": {},
+      "name": "camtract"
+    }
+  ],
+  "scale": 1,
+  "metatile": 2,
+  "_basemap": "fcc.map-kzt95hy6",
+  "name": "Cost Map Feb 2014 tract mouseover",
+  "description": "",
+  "attribution": "",
+  "legend": ""
+}
