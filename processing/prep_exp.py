@@ -170,7 +170,6 @@ try:
 	theStates = theStates + ["40","41","42","44","45","46","47","48","49"] #43
 	theStates = theStates + ["50","51","53","54","55","56"] #"52"
 	theStates = theStates + ["60","66","69","72","78","47"] #50
-	theStates = ["27"]
 
 	for theST in theStates:
 		print "    begining working on State: " + theST
