@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset=utf-8 />
-<title>Map Template</title>
+<title>CAM Cost Map</title>
 <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no' />
 <script src='https://api.tiles.mapbox.com/mapbox.js/v1.6.1/mapbox.js'></script>
 <script src='//api.tiles.mapbox.com/mapbox.js/plugins/leaflet-hash/v0.2.1/leaflet-hash.js'></script>
@@ -78,9 +78,8 @@ tfoot sup { margin-right: 2px; position: relative; top: 2px; }
                 <h2>Selected Tract: <span id="stat-tract">---------</span></h2>
                 (County: <span id="stat-cnty">------</span>, <span id="stat-state">--</span>)
                 <dl class="dl-statTract dl-inline">
-                    <dt>Locations Unserved by an Unsubsidized Provider: </dt>
-                    <dd><br>
-                        <span id="stat-totloc">----</span></dd>
+                    <dt>Locations Unserved<sup>1</sup>: </dt>
+                    <dd><span id="stat-totloc">----</span></dd>
                     <dt>Total Annual Support:</dt>
                     <dd>$ <span id="stat-totsup">----</span></dd>
                     <dt>- Price cap:</dt>
@@ -104,11 +103,11 @@ tfoot sup { margin-right: 2px; position: relative; top: 2px; }
             </section>
             	<tableclass="table-legend table-data">
             		<tr>
-            			<td>The number of locations served/unserved by a Local Exchange Carrier with at least 3 Mbps/786 kbps Internet access can be found in the <a href="http://data.fcc.gov/download/cam4map/cam_tract.zip">Tract Level Data, </a> <a href="http://data.fcc.gov/download/cam4map/cam_block_mapping.zip">Map Level Data, </a> and <a href="http://data.fcc.gov/download/cam4map/cam_block.zip">Block Level Data </a> files.</td>
+            			<td>Further information about this map, the source data, Frequently Asked Questions (FAQ), and additional resources can be found on the <a href="https://fccdata.github.io/cost_model_illustration/about.md">About page.</td>
             		</tr>
             		<tr></tr>
             	</table>
-                <a href="http://data.fcc.gov/download/cam4map/DataDictionary.pdf">Data Dictionary; </a>
+                
     </section>
     <p class="lnk-togLegend"><a class="btn btn-xs" href="#void">Show Map Legend</a></p>
     <div id="map-legend">	
@@ -119,13 +118,17 @@ tfoot sup { margin-right: 2px; position: relative; top: 2px; }
         <thead>
             <tr>
                 <th>Cost per location</th>
-                <th>Unsubsidized Served<sup>1</sup></th>
-                <th>Unsubsidized Unserved<sup>1</sup></th>
+                <th>Served<sup>1</sup></th>
+                <th>Unserved<sup>1</sup></th>
+            </tr>
+            <tr>
+                 <th>&nbsp;</th>
+                 <th colspan="2" style="font-size: 10px; font-weight: plain;">Without USF support</th>
             </tr>
         </thead>
         <tfoot>
             <tr>
-                <td colspan=3><sup>1</sup>SERVED:  Census blocks are considered served by an unsubsidized provider if they report 3 Mbps downstream / 768 kbps upstream Internet access in SBI round 7 data and report voice connections on FCC Form 477. </td>
+                <td colspan=3><sup>1</sup>This map does not show areas served by current recipients of Universal Service Funding (USF), such as local exchnage carriers.</td>
             </tr>
         </tfoot>
         <tbody>
