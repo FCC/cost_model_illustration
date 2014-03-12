@@ -2,7 +2,8 @@
 layout: default
 title: About the CAM COST Map
 --- 
-The CAM cost map provides information that may help interested parties determine whether they can economically deploy next generation networks for the same amount of federal support or less than that calculated by the Connect America Cost Model, Version 4.0 (CACM). 
+The CAM cost map provides information that may help interested parties determine whether they can economically deploy next generation networks for the same amount of federal support or less than that calculated by the Connect America Cost Model, Version 4.0 (CACM).
+{.intro}
 
 The map displays the outputs of the CACM, which calculates costs per location for the entire country. Areas marked as “served” are believed to have Internet access of at least 3 Mbps downstream and 768 kbps upstream from a cable or fixed-wireless provider (according to State Broadband Initiative data, round 7, data as of December 2012) that reports it provides voice service on FCC Form 477 and does not receive high-cost USF support.
 
