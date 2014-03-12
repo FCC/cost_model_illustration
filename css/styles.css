@@ -153,6 +153,15 @@ hr {
   max-width: 1200px;
   position: relative;
 }
+#title .content {
+  margin-bottom: 0;
+}
+#title .content p {
+  margin-bottom: 0;
+}
+#map-c .content {
+  margin-top: 20px;
+}
 .content {
   margin: 85px auto 50px auto;
   position: relative;

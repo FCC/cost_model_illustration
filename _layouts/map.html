@@ -1,126 +1,19 @@
 {% include header.html %}
 
-<div id="map-c" class="container">
+<div id="title" class="container">
     <div class="content">
         <h3>CAM Cost Map</h3>
-        <p>Zoom in to display tract level details on mouseover / touch below.</p>
+        <p class="caption">Zoom in to display tract level details on mouseover / touch below.</p>
         <p class="caption">Compatible with current versions of Chrome, Firefox, or Safari browsers.</p>
-
+    </div>
+</div>
+<div id="map-c" class="container">
+    <div class="content">
         <div id="map"></div>
         {% include data.html %}
     </div>
 </div>
 
-<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script> 
-<script>window.jQuery || document.write('<script src="js/libs/jquery-1.11.0.min.js"><\/script>')</script> 
-<script>
-
-// Setup map
-var map = L.mapbox.map('map', 'fcc.map-kzt95hy6,fcc.cni885mi,fcc.zrbgwrk9,fcc.j5v4e7b9,fcc.55bchaor,fcc.0iesif6r,fcc.pj3mobt9', {legendControl: false, attributionControl: false, gridControl: false, maxZoom: 12})
-            .setView([38.82, -94.96], 4);
-var hash = L.hash(map);      
-
-// Display the map tooltip in the sidebar
-/*map.gridLayer.on('mousemove',function(o) {
-	   
-	var data;
-
-	if (o.data != undefined) {
-	   data = o.data;   
-	   
-		// Populate location other stats (teaser fields from map)
-		$('#stat-cnty').text(data.county_name);
-		$('#stat-state').text(data.state);		
-		$('#stat-tract').text(data.tract);
-		$('#stat-totloc').text(data.total_locations);
-		$('#stat-totsup').text(formatComma(data.total_annual_support));
-		
-		// Additional Cost Stats (teaser fields from map)		
-		$('#stat-pclocbtwn').text(data.pc_locations_between);
-		$('#stat-rorlocbtwn').text(data.ror_locations_between);
-		$('#stat-pclocabv').text(data.pc_locations_above_ttc);
-		$('#stat-rorlocabv').text(data.ror_locations_above_ttc);
-		$('#stat-pcannsup').text(formatComma(data.pc_annual_support));
-		$('#stat-rorannsup').text(formatComma(data.ror_annual_support));
-	
-	
-	} else { // Reset the text labels
-		$('#stat-tract').text('---------');
-		$('#stat-cnty').text('------');
-		$('#stat-state, #stat-pcannsup, #stat-rorannsup').text('--');
-		$('#stat-totloc, #stat-totsup').text('----');
-		$('#dl-numLocs').find('span').text('-----');	
-	}
-
-});  */  
-
-// Display the map tooltip in the sidebar
-map.gridLayer.on('click',function(o) {
-       
-    var data;
-
-    if (o.data != undefined) {
-       data = o.data;   
-       
-        // Populate location other stats (teaser fields from map)
-        $('#stat-cnty').text(data.county_name);
-        $('#stat-state').text(data.state);      
-        $('#stat-tract').text(data.tract);
-        $('#stat-totloc').text(data.total_locations);
-        $('#stat-totsup').text(formatComma(data.total_annual_support));
-        
-        // Additional Cost Stats (teaser fields from map)       
-        $('#stat-pclocbtwn').text(data.pc_locations_between);
-        $('#stat-rorlocbtwn').text(data.ror_locations_between);
-        $('#stat-pclocabv').text(data.pc_locations_above_ttc);
-        $('#stat-rorlocabv').text(data.ror_locations_above_ttc);
-        $('#stat-pcannsup').text(formatComma(data.pc_annual_support));
-        $('#stat-rorannsup').text(formatComma(data.ror_annual_support));
-    
-    
-    } else { // Reset the text labels
-        $('#stat-tract').text('---------');
-        $('#stat-cnty').text('------');
-        $('#stat-state, #stat-pcannsup, #stat-rorannsup').text('--');
-        $('#stat-totloc, #stat-totsup').text('----');
-        $('#dl-numLocs').find('span').text('-----');    
-    }
-
-});   
-
-// Format dummy data with commas
-function formatComma(x) {
-    return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-}
-
-$('#map').css('height')
-
-// Resize the map width and position the legend when the window is resized
-/*$(window).on('resize', function(e) {
-    var mapwidth = $('body').width() - $('#map-sidebar').width(),
-		legendWidth = ($('#map-sidebar').width()/2) - ($('#map-legend').width()/2) - 5;
-		
-	$('#map-legend').css('left', legendWidth);
-	$('#map').css('width', mapwidth);
-}).resize();*/
-
-// Toggle the legend display
-$('.lnk-togLegend').click(function(e) {
-	e.preventDefault();
-	$("#map-legend").animate(
-		{height: [ "toggle", "swing" ],
-	    opacity: "toggle"},
-		350, 
-		function(){ 
-			if ($(this).is(':visible')) {
-			    $('.lnk-togLegend').eq(0).addClass('hide');	
-			} else {
-				$('.lnk-togLegend').eq(0).removeClass('hide');
-			}	 
-		}
-	);	
-});		
-
-</script>
+{% include footer.html %}
 </body>
 </html>

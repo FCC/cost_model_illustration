@@ -1,6 +1,7 @@
 <script src="http://code.jquery.com/jquery-1.10.2.min.js" type="application/javascript"></script>
 <script type="text/javascript">
 $(document).ready(function () {
+  // nav
   $("#large a").click(function(event) {  
     $('html, body').animate({
       scrollTop: $($(this).attr('href')).offset().top-80
@@ -46,6 +47,43 @@ $(document).ready(function () {
     }
     $("#small").toggleClass('closed');
   })
+
+  // map
+  var map = L.mapbox.map('map', 'fcc.map-kzt95hy6,fcc.cni885mi,fcc.zrbgwrk9,fcc.j5v4e7b9,fcc.55bchaor,fcc.0iesif6r,fcc.pj3mobt9', {legendControl: false, attributionControl: false, gridControl: false, maxZoom: 12})
+            .setView([38.82, -94.96], 4);
+  var hash = L.hash(map);      
+
+  // Display the map tooltip
+  map.gridLayer.on('mousemove click',function(o) {
+    var data;
+    if (o.data != undefined) {
+      data = o.data;   
+      // Populate location other stats (teaser fields from map)
+      $('#stat-cnty').text(data.county_name);
+      $('#stat-state').text(data.state);    
+      $('#stat-tract').text(data.tract);
+      $('#stat-totloc').text(data.total_locations);
+      $('#stat-totsup').text(formatComma(data.total_annual_support));
+      // Additional Cost Stats (teaser fields from map)   
+      $('#stat-pclocbtwn').text(data.pc_locations_between);
+      $('#stat-rorlocbtwn').text(data.ror_locations_between);
+      $('#stat-pclocabv').text(data.pc_locations_above_ttc);
+      $('#stat-rorlocabv').text(data.ror_locations_above_ttc);
+      $('#stat-pcannsup').text(formatComma(data.pc_annual_support));
+      $('#stat-rorannsup').text(formatComma(data.ror_annual_support));    
+    } else { // Reset the text labels
+      $('#stat-tract').text('---------');
+      $('#stat-cnty').text('------');
+      $('#stat-state, #stat-pcannsup, #stat-rorannsup').text('--');
+      $('#stat-totloc, #stat-totsup').text('----');
+      $('#dl-numLocs').find('span').text('-----');  
+    }
+  });
+
+  // Format dummy data with commas
+  function formatComma(x) {
+    return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+  }  
 });
 </script>
 
