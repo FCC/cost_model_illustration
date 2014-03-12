@@ -1,9 +1,11 @@
 ---
 layout: default
 title: About the CAM COST Map
---- 
+---
+### About the CAM COST Map
+{#about}
 The CAM cost map provides information that may help interested parties determine whether they can economically deploy next generation networks for the same amount of federal support or less than that calculated by the Connect America Cost Model, Version 4.0 (CACM).
-{.intro}
+{.intro #about}
 
 The map displays the outputs of the CACM, which calculates costs per location for the entire country. Areas marked as “served” are believed to have Internet access of at least 3 Mbps downstream and 768 kbps upstream from a cable or fixed-wireless provider (according to State Broadband Initiative data, round 7, data as of December 2012) that reports it provides voice service on FCC Form 477 and does not receive high-cost USF support.
 
@@ -22,6 +24,7 @@ A few caveats about the information presented by this map. The map does not show
 Finally, we emphasize that parties should make their own estimates as to the amount of federal support necessary to serve high cost areas, based on their knowledge of local geography, the population to be served, and their individual network costs. Where a party has ready assets in place that can be leveraged or other sources of funding for broadband deployment, or can partner with others, the actual costs may well be less than the model-calculated costs. That is what we are seeking to learn and one reason for making this map and calculations available in this format.
 
 ### Data
+{#data}
 
 For more information about the data underlying this map see the following links:
 
@@ -32,8 +35,10 @@ For more information about the data underlying this map see the following links:
 * [Block level mapping data - (csv, 22Mb zip)](http://data.fcc.gov/download/cam4map/cam_block_mapping.zip) 
 
 ### FCC Rural Experiments
+{#rural-exp}
 
 For more information about the rural experiments, see: [http://www.fcc.gov/encyclopedia/rural-broadband-experiments](http://www.fcc.gov/encyclopedia/rural-broadband-experiments) 
 
 ### Frequently Asked Questions
+{#faq}
 
