@@ -1,0 +1,38 @@
+<script src="http://code.jquery.com/jquery-1.10.2.min.js" type="application/javascript"></script>
+<script type="text/javascript">
+$(document).ready(function () {
+  $("#small").click(function() {
+    if ($("#small").hasClass('closed')) {
+      $("#large").animate({
+        right: "0",
+        top: "0"
+      }, 500);
+      /*$("#small").animate({
+        marginRight: "180px"
+      }, 500);*/
+      $(".container").animate({
+        right: "200px"
+      }, 500);
+      //$("#large").css("top", "0").css("right", "0");
+      //$("#small").css("margin-right", "180px");
+    } else {
+      $("#large").animate({
+        right: "-200px",
+        top: "0"
+      }, 500);
+      /*$("#small").animate({
+        marginRight: "0"
+      }, 500);*/
+      $(".container").animate({
+        right: "0"
+      }, 500);
+     // $("#large").css("top", "-9999px").css("right", "-9999px");
+      //$("#small").css("margin-right", "0");
+    }
+    $("#small").toggleClass('closed');
+  })
+});
+</script>
+
+</body>
+</html>
