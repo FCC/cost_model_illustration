@@ -1,100 +1,14 @@
 {% include header.html %}
 
-<div class="container">
+<div id="map-c" class="container">
     <div class="content">
-        <div id="map"></div>
-    
-<aside id="map-sidebar">
-    <section id="map-summary">
         <h3>CAM Cost Map</h3>
-        <p>Zoom in to display tract level details on mouseover below.</p>
+        <p>Zoom in to display tract level details on mouseover / touch below.</p>
         <p class="caption">Compatible with current versions of Chrome, Firefox, or Safari browsers.</p>
-        <section class="sect-divider">
-                <h4>Selected Tract: <span id="stat-tract">---------</span></h4>
-                (County: <span id="stat-cnty">------</span>, <span id="stat-state">--</span>)
-                <dl class="dl-statTract dl-inline">
-                    <dt>Locations Unserved<sup>1</sup>: </dt>
-                    <dd><span id="stat-totloc">----</span></dd>
-                    <dt>Total Annual Support:</dt>
-                    <dd>$ <span id="stat-totsup">----</span></dd>
-                    <dt>- Price cap:</dt>
-                    <dd>$ <span id="stat-pcannsup">----</span></dd>
-                    <dt>- Rate-of-return:</dt>
-                    <dd>$ <span id="stat-rorannsup">----</span></dd>
-                </dl>
-            </section>
-            <section class="sect-divider">
-                <h4><abbr title="Number">No.</abbr> of Locations >$50 <span style="font-size: 11px;">(per month, per location)</span></h4>
-                <dl id="dl-numLocs" class="dl-inline">
-                    <dt><abbr title="Price cap">PC</abbr> Locations Between: </dt>
-                    <dd><span id="stat-pclocbtwn">-----</span></dd>
-                    <dt><abbr title="Rate-of-return">ROR</abbr> Locations Between: </dt>
-                    <dd><span id="stat-rorlocbtwn">-----</span></dd>
-                    <dt><abbr title="Price cap">PC</abbr> Locations Above: </dt>
-                    <dd><span id="stat-pclocabv">-----</span></dd>
-                    <dt><abbr title="Rate-of-return">ROR</abbr> Locations Above: </dt>
-                    <dd><span id="stat-rorlocabv">-----</span></dd>
-                </dl>
-            </section>
-            	<tableclass="table-legend table-data">
-            		<tr>
-            			<td>See the <a href="https://fccdata.github.io/cost_model_illustration/about.md">About page</a> for source data, Frequently Asked Questions (FAQ), and additional resources.</td>
-            		</tr>
-            		<tr></tr>
-            	</table>
-                
-    </section>
-    <p class="lnk-togLegend"><a class="btn btn-xs" href="#void">Show Map Legend</a></p>
-    <div id="map-legend">	
-    <table class="table-legend table-data">
-        <caption>
-        Model Landscape
-        </caption>
-        <thead>
-            <tr>
-                <th>Cost per location</th>
-                <th>Served<sup>1</sup></th>
-                <th>Unserved<sup>1</sup></th>
-            </tr>
-            <tr>
-                 <th>&nbsp;</th>
-                 <th colspan="2" style="font-size: 10px; font-weight: plain;">Without USF support</th>
-            </tr>
-        </thead>
-        <tfoot>
-            <tr>
-                <td colspan=3><sup>1</sup>This map does not show areas served by current recipients of Universal Service Funding (USF), such as local exchnage carriers.</td>
-            </tr>
-        </tfoot>
-        <tbody>
-            <tr>
-                <td style="white-space: nowrap;"><strong>Above</strong> <br>
-                    Price cap: &ge; $183.53 <br>
-                    Rate-of-return: &ge; $300</td>
-                <td><span class="key-symbol" style="color:#FFACA1">▉</span></td>
-                <td><span class="key-symbol" style="color:#DC4E3D">▉</span></td>
-            </tr>
-            <tr>
-                <td style="white-space: nowrap;"><strong>Between</strong> <br>
-                    Price cap: &gt; $50 and &lt; $183.53 <br>
-                    Rate-of-return: &gt; $50 and &lt; $300</td>
-                <td><span class="key-symbol" style="color:#C4F489">▉</span></td>
-                <td><span class="key-symbol" style="color:#28925B">▉</span></td>
-            </tr>
-            <tr>
-                <td style="white-space: nowrap;"><strong>Below</strong> <br>
-                    Price cap: &le; $50 <br>
-                    Rate-of-return: &le; $50</td>
-                <td><span class="key-symbol" style="color:#FBDA62">▉</span></td>
-                <td><span class="key-symbol" style="color:#D99442">▉</span></td>
-            </tr>
-        </tbody>
-    </table>
-    <p class="lnk-togLegend"><a class="btn btn-xs" href="#void">Close</a></p>
-</div>
-    
-</aside>
- </div>
+
+        <div id="map"></div>
+        {% include data.html %}
+    </div>
 </div>
 
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script> 

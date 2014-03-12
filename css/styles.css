@@ -6,12 +6,12 @@ html {
   height: 100%;
 }
 body {
-  color: #212326;
+  color: #51545B;
   font-family: "Source Sans Pro";
   font-size: 1.6rem;
   height: 100%;
   margin: 0;
-  padding: 0;
+  padding: 0 10px;
 }
 a:link {
   color: #55A3CA;
@@ -74,10 +74,15 @@ nav#large {
 }
 
 #logo {
+  color: #ffffff;
   position: fixed;
   top: 17px;
   left: 10px;
   margin: 0;
+}
+#logo a {
+  color: #ffffff;
+  text-decoration: none;
 }
 
 p, ol, ul, li, address {
@@ -97,7 +102,17 @@ strong, b {
 li {
   margin-bottom: 5px;
 }
+dl {
+  font-size: 14px;
+}
+dd {
+  color: #212326;
+  font-size: 18px;
+  font-weight: 600;
+  margin: 0 0 10px;
+}
 h1, h2, h3, h4, h5, h6 {
+  color: #212326;
   font-weight: 600;
   line-height: 1.2;
   margin-bottom: 0;
@@ -116,6 +131,13 @@ h4 {
 }
 h5 {
   font-size: 1.6rem;
+}
+h5.tract {
+  font-weight: normal;
+}
+h5.tract span {
+  color: #212326;
+  font-weight: 600;
 }
 h6 {
   font-size: 1.4rem;
@@ -149,7 +171,7 @@ hr {
 
 #map, figure.large, table.large  {
   margin: 0 auto;
-  max-width: 96%;
+  max-width: 100%;
 }
 figure.large img {
   max-width: 100%;
@@ -157,12 +179,8 @@ figure.large img {
 
 #map {
   background-color: #dddddd;
-  height: 500px;
+  height: 200px;
   margin-bottom: 20px;
-}
-
-aside #map {
-
 }
 
 .img {
@@ -236,6 +254,7 @@ th {
   text-align: left;
 }
 .table {
+  font-size: 12px;
   margin-bottom: 20px;
 }
 .table > thead > tr > th,
@@ -252,6 +271,7 @@ th {
 .table > thead > tr > th {
   vertical-align: bottom;
   border-bottom: 2px solid #dddddd;
+  color: #212326;
 }
 .table > thead:last-child > tr > th {
   vertical-align: bottom;
@@ -269,9 +289,9 @@ th {
 .table > tbody + tbody {
   border-top: 2px solid #dddddd;
 }
-
-.table-zebra tr:nth-child(even) td {
-  background-color: #f5f5f5;
+.table caption {
+  color: #212326;
+  font-weight: bold;
 }
 
 @media (min-width: 600px) {
@@ -280,8 +300,11 @@ th {
     margin-left: 20px;
     width: 200px;
   }
+  #map-c .content {
+    width: 1200px;
+  }
   .content {
-    width: 560px;
+    width: 590px;
   }
 }
 
@@ -300,11 +323,6 @@ th {
   nav#large a {
     display: inline;
   }
-  #map, figure.large, table.large  {
-    margin-left: -100px;
-    max-width: 760px;
-    width: 760px;
-  }
   figure.large img {
     max-width: 100%;
   }
@@ -321,6 +339,29 @@ th {
   }
 }
 
+@media (min-width: 800px) {
+  #map-c .content {
+    width: 760px;
+  }
+  .data {
+    *zoom: 1;
+  }
+  .data:before,
+  .data:after {
+    display: table;
+    content: "";
+    line-height: 0;
+  }
+  .data:after {
+    clear: both;
+  }
+  .data .sect-divider {
+    float: left; width: 45%; margin-right: 5%;
+  }
+  #map-legend {
+    float: none;
+  }
+}
 @media (min-width: 1210px) {
   .avatar {
     float: none;
@@ -333,22 +374,39 @@ th {
     margin-top: 2rem;
     padding-top: 2rem;
   }
-  
   .content {
     width: 45.833333%;
+  }
+  #map-c .content {
+    width: 1200px;
+  }
+  .data {
+    width: 66.66666%;
+  }
+  .data:after {
+    clear: none;
+  }
+  .data .sect-divider {
+    float: left; width: 45%; margin-right: 5%;
+  }
+  #map-legend {
+    float: right;
+    width: 33.33333%;
   }
 
   hr {
     width: 875px;
   }
 
+
   #map, figure.large, table.large  {
-    margin-left: -325px;
+    height: 300px;
+    margin:  0 auto;
     max-width: 1200px;
     width: 1200px;
   }
 
-  figure.large img {
+  figure.large img, .large {
     max-width: 100%;
   }
   figure.aside {
