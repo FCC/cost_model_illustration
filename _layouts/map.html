@@ -7,8 +7,8 @@
 <script src='https://api.tiles.mapbox.com/mapbox.js/v1.6.1/mapbox.js'></script>
 <script src='//api.tiles.mapbox.com/mapbox.js/plugins/leaflet-hash/v0.2.1/leaflet-hash.js'></script>
 <link href='https://api.tiles.mapbox.com/mapbox.js/v1.6.1/mapbox.css' rel='stylesheet' />
+<link href="{{ site.baseurl }}/css/styles.css" rel="stylesheet">
 <style>
-body { font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; font-size: 12px; margin:0; padding:0; }
 .sect-divider { border-bottom: 1px solid #CCC; }
 h1 { font-size: 22px; margin: 0; }
 h2 { font-size: 16px; margin-bottom: 3px; }
@@ -69,6 +69,25 @@ tfoot sup { margin-right: 2px; position: relative; top: 2px; }
 </style>
 </head>
 <body>
+    <header style="">
+      <div class="container">
+        <h4 id="logo">FCC - CAM Cost Map</h4>
+        <div id="menu">
+          <nav id="large">
+            <a href="/cost_model_illustration/">View the Map</a>
+            <a href="/cost_model_illustration/about">About</a>
+          </nav>
+          <nav class="closed" id="small" style="">
+            <!--<h6 style="display:inline; width:4rem; margin-top:.2rem;">Menu</h6>-->
+            <div>
+              <div style="border-radius:20px; background:#ffffff; width:2rem; height:.3rem; margin-bottom:.1rem;"></div>
+              <div style="border-radius:20px; background:#ffffff; width:1rem; height:.3rem; margin-bottom:.1rem;"></div>
+              <div style="border-radius:20px; background:#ffffff; width:1.5rem; height:.3rem;"></div>
+            </div>
+          </nav>
+        </div>
+      </div>
+    </header>
 <div id="map"></div>
 <aside id="map-sidebar">
     <section id="map-summary">
@@ -103,7 +122,7 @@ tfoot sup { margin-right: 2px; position: relative; top: 2px; }
             </section>
             	<tableclass="table-legend table-data">
             		<tr>
-            			<td>See the <a href="/cost_model_illustration/about">About page</a> for source data, Frequently Asked Questions (FAQ), and additional resources.</td>
+            			<td>See the <a href="https://fccdata.github.io/cost_model_illustration/about.md">About page</a> for source data, Frequently Asked Questions (FAQ), and additional resources.</td>
             		</tr>
             		<tr></tr>
             	</table>
