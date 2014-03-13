@@ -99,6 +99,14 @@ strong, b {
   font-size: 1.2rem;
   margin-top: 5px;
 }
+#help-text {
+  color: #D95752;
+  font-weight: 600;
+  margin: 5px 0 0;
+}
+#help-text.good {
+  color: #99BD62;
+}
 li {
   margin-bottom: 5px;
 }
@@ -135,9 +143,14 @@ h5 {
 h5.tract {
   font-weight: normal;
 }
-h5.tract span {
+h5 #stat-tract {
   color: #212326;
+  font-size: 18px;
   font-weight: 600;
+}
+.data h6 {
+  font-weight: normal;
+  margin-top: 3px;
 }
 h6 {
   font-size: 1.4rem;
