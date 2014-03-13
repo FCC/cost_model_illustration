@@ -403,6 +403,7 @@ th {
     width: 1200px;
   }
   .data {
+    float: left;
     width: 66.66666%;
   }
   .data:after {
