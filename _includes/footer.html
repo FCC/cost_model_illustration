@@ -51,10 +51,11 @@ $(document).ready(function () {
   // map
   var map = L.mapbox.map('map', 'fcc.map-kzt95hy6,fcc.cni885mi,fcc.zrbgwrk9,fcc.j5v4e7b9,fcc.55bchaor,fcc.0iesif6r,fcc.pj3mobt9', {legendControl: false, attributionControl: false, gridControl: false, maxZoom: 12})
             .setView([38.82, -94.96], 4);
+  map.scrollWheelZoom.disable();
   var hash = L.hash(map);      
 
   // Display the map tooltip
-  map.gridLayer.on('mousemove click',function(o) {
+  map.gridLayer.on('click',function(o) {
     var data;
     if (o.data != undefined) {
       data = o.data;   
