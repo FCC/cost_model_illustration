@@ -205,6 +205,13 @@ figure.large img {
   margin-bottom: 20px;
 }
 
+#map-legend span {
+  display: block;
+  float: right;
+  height: 15px;
+  width: 30px;
+}
+
 .img {
   background-color: #dddddd;
   color: #ffffff;
