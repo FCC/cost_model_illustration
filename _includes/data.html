@@ -1,0 +1,75 @@
+<div class="data">
+    <h5 class="tract">Selected Tract <span id="stat-tract">---------</span></h5>
+    <h6><span id="stat-cnty">------</span> County, <span id="stat-state">--</span></h6>
+    <section class="sect-divider">
+        <dl class="dl-statTract dl-inline">
+            <dt>Locations Unserved<sup>1</sup> </dt>
+            <dd><span id="stat-totloc">----</span></dd>
+            <dt>Total Annual Support</dt>
+            <dd>$ <span id="stat-totsup">----</span></dd>
+            <dt>Price cap</dt>
+            <dd>$ <span id="stat-pcannsup">----</span></dd>
+            <dt>Rate-of-return</dt>
+            <dd>$ <span id="stat-rorannsup">----</span></dd>
+        </dl>
+    </section>
+    <section class="sect-divider">
+        <h5>Number of Locations >$50 <span style="font-size: 11px;">(per month, per location)</span></h5>
+        <dl id="dl-numLocs" class="dl-inline">
+            <dt>Price Cap Locations Between</dt>
+            <dd><span id="stat-pclocbtwn">-----</span></dd>
+            <dt>Rate Of Return Locations Between</dt>
+            <dd><span id="stat-rorlocbtwn">-----</span></dd>
+            <dt>Price Cap Locations Above</dt>
+            <dd><span id="stat-pclocabv">-----</span></dd>
+            <dt>Rate Of Return Locations Above</dt>
+            <dd><span id="stat-rorlocabv">-----</span></dd>
+        </dl>
+    </section>
+</div>
+
+<div id="map-legend">   
+    <table class="table">
+        <caption>Model Landscape</caption>
+        <thead>
+            <tr>
+                <th>Cost per location</th>
+                <th>Served<sup>1</sup></th>
+                <th>Unserved<sup>1</sup></th>
+            </tr>
+            <tr>
+                <th>&nbsp;</th>
+                <th colspan="2" style="font-size: 10px;">Without USF support</th>
+            </tr>
+        </thead>
+        <tfoot>
+            <tr>
+                <td colspan="3"><p class="caption"><sup>1</sup> This map does not show areas served by current recipients of Universal Service Funding (USF), such as local exchange carriers.</p>
+                </td>
+            </tr>
+        </tfoot>
+        <tbody>
+            <tr>
+                <td style="white-space: nowrap;"><strong>Above</strong> <br>
+                    Price cap: &ge; $183.53 <br>
+                    Rate-of-return: &ge; $300</td>
+                <td><span class="key-symbol" style="background-color:#FFACA1"></span></td>
+                <td><span class="key-symbol" style="background-color:#DC4E3D"></span></td>
+            </tr>
+            <tr>
+                <td style="white-space: nowrap;"><strong>Between</strong> <br>
+                    Price cap: &gt; $50 and &lt; $183.53 <br>
+                    Rate-of-return: &gt; $50 and &lt; $300</td>
+                <td><span class="key-symbol" style="background-color:#C4F489"></span></td>
+                <td><span class="key-symbol" style="background-color:#28925B"></span></td>
+            </tr>
+            <tr>
+                <td style="white-space: nowrap;"><strong>Below</strong> <br>
+                    Price cap: &le; $50 <br>
+                    Rate-of-return: &le; $50</td>
+                <td><span class="key-symbol" style="background-color:#FBDA62"></span></td>
+                <td><span class="key-symbol" style="background-color:#D99442"></span></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
