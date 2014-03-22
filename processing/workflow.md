@@ -2,15 +2,13 @@
 
 This describes the workflow for the steps to create the cost experiment map.  The resulting map is a 6 color map.  The legend is made by aggregating the fields bb_served (e.g. wether or not the block is currently served by broadband) and the combination of values in the pc_rollup and ror_rollup.  So you end up with something like this:
 <table>
-	<tr>
-    	<td>Block Broadband Condition</td><td>Costs Per Location in the block</td>
-        <td>Block is Served</td><td>Block has Price Cap and Rate of return costs ABOVE the threshhold</td>
-        <td>Block is Served</td><td>Block has Price Cap and Rate of return costs BETWEEN the threshhold</td>
-        <td>Block is Served</td><td>Block has Price Cap and Rate of return costs BELOW the threshhold</td>
-        <td>Block is Not Served</td><td>Block has Price Cap and Rate of return costs ABOVE the threshhold</td>
-        <td>Block is Not Served</td><td>Block has Price Cap and Rate of return costs BETWEEN the threshhold</td>
-        <td>Block is Not Served</td><td>Block has Price Cap and Rate of return costs BELOW the threshhold</td>
-    </tr>
+	<tr><td>Block Broadband Condition</td><td>Costs Per Location in the block</td></tr>
+    <tr><td>Block is Served</td><td>Block has Price Cap and Rate of return costs ABOVE the threshhold</td></tr>
+    <tr><td>Block is Served</td><td>Block has Price Cap and Rate of return costs BETWEEN the threshhold</td></tr>
+    <tr><td>Block is Served</td><td>Block has Price Cap and Rate of return costs BELOW the threshhold</td></tr>
+    <tr><td>Block is Not Served</td><td>Block has Price Cap and Rate of return costs ABOVE the threshhold</td></tr>
+    <tr><td>Block is Not Served</td><td>Block has Price Cap and Rate of return costs BETWEEN the threshhold</td></tr>
+    <tr><td>Block is Not Served</td><td>Block has Price Cap and Rate of return costs BELOW the threshhold</td></tr>
 </table>
 
 Step 1 - Input Source Data
