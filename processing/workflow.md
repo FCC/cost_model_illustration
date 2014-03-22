@@ -31,7 +31,7 @@ Notes
 
 Generate Tiles
 --------------
-- the (mapbox project)[] has all the color values, zoom/opacity etc already set up.  it contains a connection to the postgres table created in Step 2.  One might have to modify that based on the table selection/postgres connection string values
+- the (mapbox project)[https://github.com/fccdata/cost_model_illustration/tree/master/visualization/cam_exp] has all the color values, zoom/opacity etc already set up.  it contains a connection to the postgres table created in Step 2.  One might have to modify that based on the table selection/postgres connection string values
 - to test that the tiles work the way you think, you can modify the mapbox project, and put a query on the table with the state_fips to only do one state and test the resutls
 - in order to run the tile generation from the terminal window (which is preferred b/c openning this project in tilemill will result in tileill trying to cache all of the values) use the following commands
 ' cd /Applications/TileMill.app/Contents/Resources
