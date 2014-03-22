@@ -13,7 +13,7 @@ This describes the workflow for the steps to create the cost experiment map.  Th
 
 Step 1 - Input Source Data
 --------------------------
-Import the source block cost data from Cost Quest into a postgres table.  This data comes as a csv of blocks.  The (SQL script)[https://github.com/fccdata/cost_model_illustration/blob/master/processing/import_experiment.sql] loads the data into postgres.  The last command in this scriot demonstrates the variation of the fields 'Served' and 'Rollup' used to make the legend so one can understand the number of records for these selections.  Typically CQ delivers only blocks w/ population so it is far lower than the 11 million row count of all blocks.
+Import the source block cost data from Cost Quest into a postgres table.  This data comes as a csv of blocks.  The [SQL script](https://github.com/fccdata/cost_model_illustration/blob/master/processing/import_experiment.sql) loads the data into postgres.  The last command in this scriot demonstrates the variation of the fields 'Served' and 'Rollup' used to make the legend so one can understand the number of records for these selections.  Typically CQ delivers only blocks w/ population so it is far lower than the 11 million row count of all blocks.
 
 Step 2 - Make geospatial table from Source Data
 -----------------------------------------------
