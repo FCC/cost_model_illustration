@@ -33,16 +33,14 @@ Colors and Legend
 -----------------
 Here are the resulting colors and field values for the legend.
 <table>
-	<tr>
-    	<td>Block Broadband Condition</td><td>Costs Per Location in the block</td><td>myvalue</td><td>hex color</td>
-        <td>Block is Served</td><td>Block has Price Cap and Rate of return costs ABOVE the threshhold</td><td>1</td><td>#FFACA1</td>
-        <td>Block is Served</td><td>Block has Price Cap and Rate of return costs BETWEEN the threshhold</td><td>2</td><td>#C4F489</td>
-        <td>Block is Served</td><td>Block has Price Cap and Rate of return costs BELOW the threshhold</td><td>3</td><td>#FBDA62</td>
-        <td>Block is Not Served</td><td>Block has Price Cap and Rate of return costs ABOVE the threshhold</td><td>4</td><td>#DC4E3D</td>
-        <td>Block is Not Served</td><td>Block has Price Cap and Rate of return costs BETWEEN the threshhold</td><td>5</td><td>#28925B</td>
-        <td>Block is Not Served</td><td>Block has Price Cap and Rate of return costs BELOW the threshhold</td><td>6</td><td>#D99442</td>
-        <td>N/A</td><td>Water</td><td>7</td><td>#DEEDEF</td>
-    </tr>
+<tr><td>Block Broadband Condition</td><td>Costs Per Location in the block</td><td>myvalue</td><td>hex color</td></tr>
+<tr><td>Block is Served</td><td>Block has Price Cap and Rate of return costs ABOVE the threshhold</td><td>1</td><td>#FFACA1</td></tr>
+<tr><td>Block is Served</td><td>Block has Price Cap and Rate of return costs BETWEEN the threshhold</td><td>2</td><td>#C4F489</td></tr>
+<tr><td>Block is Served</td><td>Block has Price Cap and Rate of return costs BELOW the threshhold</td><td>3</td><td>#FBDA62</td></tr>
+<tr><td>Block is Not Served</td><td>Block has Price Cap and Rate of return costs ABOVE the threshhold</td><td>4</td><td>#DC4E3D</td></tr>
+<tr><td>Block is Not Served</td><td>Block has Price Cap and Rate of return costs BETWEEN the threshhold</td><td>5</td><td>#28925B</td></tr>
+<tr><td>Block is Not Served</td><td>Block has Price Cap and Rate of return costs BELOW the threshhold</td><td>6</td><td>#D99442</td></tr>
+<tr><td>N/A</td><td>Water</td><td>7</td><td>#DEEDEF</td></tr>
 </table>
 
 
