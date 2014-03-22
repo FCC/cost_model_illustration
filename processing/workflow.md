@@ -17,7 +17,7 @@ Import the source block cost data from Cost Quest into a postgres table.  This d
 
 Step 2 - Make geospatial table from Source Data
 -----------------------------------------------
-Run the (python script)[https://github.com/fccdata/cost_model_illustration/blob/master/processing/prep_exp.py].  This script works on the premise that (a) one has a library of blocks as individual state block tables and (b) there is a set of water and coastline attributes on the block.  The script has 4 basic parts.
+Run the [python script](https://github.com/fccdata/cost_model_illustration/blob/master/processing/prep_exp.py).  This script works on the premise that (a) one has a library of blocks as individual state block tables and (b) there is a set of water and coastline attributes on the block.  The script has 4 basic parts.
 - Part 1 - mkOutTbl() - This part creates an output table which will contain the fields, gid, state_fips, myvalue and geom.  myvalue will be 1 through 6 (e.g. the legend above).  state_fips will be the two digit state fips code. All resulting data is poured into this output table for display in the final product.
 - Part 2 - createWorking(theST) - This part creates a working dataset of the current loop of a state block table.  It then adds a field called myvalue which ends up becoming the legend.
 - Part 3 - updateWorking(theST) - This part is the real driver.  It updates the myvalue based on the 6 relative categories required to make the legend.  These 6 categories are displayed in the table above.  Served is very easy, but pc_rollup and ror_rollup, end up being quite complicated.  This complication is the result of some locations w/i an individual block can be either PC or ROR locations.  This part of the script has a sub loop which selects a hierarchy of these locations as part of the myvalue field setting.  Generally speaking Above and Between values are easy, but below threshholds are complicated.  In this step all water polygons end up w/ their own value (eg myvalue = 7).
@@ -31,7 +31,7 @@ Notes
 
 Generate Tiles
 --------------
-- the (mapbox project)[https://github.com/fccdata/cost_model_illustration/tree/master/visualization/cam_exp] has all the color values, zoom/opacity etc already set up.  it contains a connection to the postgres table created in Step 2.  One might have to modify that based on the table selection/postgres connection string values
+- the [mapbox project](https://github.com/fccdata/cost_model_illustration/tree/master/visualization/cam_exp) has all the color values, zoom/opacity etc already set up.  it contains a connection to the postgres table created in Step 2.  One might have to modify that based on the table selection/postgres connection string values
 - to test that the tiles work the way you think, you can modify the mapbox project, and put a query on the table with the state_fips to only do one state and test the resutls
 - in order to run the tile generation from the terminal window (which is preferred b/c openning this project in tilemill will result in tileill trying to cache all of the values) use the following commands
 ' cd /Applications/TileMill.app/Contents/Resources
