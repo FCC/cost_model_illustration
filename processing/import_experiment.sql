@@ -1,6 +1,6 @@
-drop table if exists analysis.experiment;
+﻿drop table if exists analysis2014.experiment;
 
-CREATE TABLE analysis.experiment
+CREATE TABLE analysis2014.experiment
 (
 	state character varying(2),
 	county_name character varying(30),
@@ -33,17 +33,19 @@ CREATE TABLE analysis.experiment
 WITH (
   OIDS=FALSE
 );
-ALTER TABLE analysis.experiment
+ALTER TABLE analysis2014.experiment
   OWNER TO postgres;
 
-copy analysis.experiment
-	from '/Users/feomike/documents/analysis/2014/experiment/ExperimentalCBMappingSupportBits_ParamsV3_02192014_0330PM_US/ExperimentalCBMappingSupportBits_ParamsV3_02192014_0330PM_US.csv'
+copy analysis2014.experiment
+	from '/Users/ericspry/Documents/Analysis/2014/cost_model_illustration/4.1 CAM Data/ExperimentalCBMappingSupportBits.csv'
 	csv header delimiter ',' quote '"';
 
 create index analysis_experiment_geoid10_btree
-	on analysis.experiment
+	on analysis2014.experiment
 	using btree (geoid10);
-	
+
+VACUUM ANALYZE	analysis2014.experiment;
+
 select bb_served, pc_rollup, ror_rollup, count(*) 
-	from analysis.experiment 
-	group by bb_served, pc_rollup, ror_rollup
+	from analysis2014.experiment 
+	group by bb_served, pc_rollup, ror_rollup;

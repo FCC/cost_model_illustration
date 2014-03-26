@@ -23,10 +23,10 @@ print "local time:", time.asctime(now)
 
 #variables
 myHost = "localhost"
-myPort = "54321"
+myPort = "5432"
 myUser = "postgres"
-db = "feomike"
-schema = "analysis"
+db = "FCCgis"
+schema = "analysis2014"
 inTBL = "experiment"
 outTBL = "exp_ply"
 census = "census2010"
@@ -169,7 +169,8 @@ try:
 	theStates = theStates + ["30","31","32","33","34","35","36","37","38","39"]
 	theStates = theStates + ["40","41","42","44","45","46","47","48","49"] #43
 	theStates = theStates + ["50","51","53","54","55","56"] #"52"
-	theStates = theStates + ["60","66","69","72","78","47"] #50
+	theStates = theStates + ["60","66","69","72","78"] #50
+	# theStates = ["10"] #Uncomment to run just one state
 
 	for theST in theStates:
 		print "    begining working on State: " + theST
@@ -179,5 +180,8 @@ try:
 		appendOutput()
 	now = time.localtime(time.time())
 	print "local time:", time.asctime(now)
-except:
-	print "something bad happened"     
+except psycopg2.ProgrammingError as e:
+	print "psycopg2 error code %s" % e.pgcode
+	raise e
+	print "			something bad happened ..."
+	     
