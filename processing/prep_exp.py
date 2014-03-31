@@ -170,14 +170,14 @@ try:
 	theStates = theStates + ["40","41","42","44","45","46","47","48","49"] #43
 	theStates = theStates + ["50","51","53","54","55","56"] #"52"
 	theStates = theStates + ["60","66","69","72","78"] #50
-	# theStates = ["10"] #Uncomment to run just one state
+	theStates = ["08"] #Uncomment to run just one state
 
 	for theST in theStates:
 		print "    begining working on State: " + theST
 		createWorking(theST)
 		updateWorking(theST)
 		print "    		...disolving..."
-		appendOutput()
+		#appendOutput()
 	now = time.localtime(time.time())
 	print "local time:", time.asctime(now)
 except psycopg2.ProgrammingError as e:
