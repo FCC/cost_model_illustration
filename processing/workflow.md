@@ -29,7 +29,7 @@ Notes
 - I have tended to run Step 2 first with a test state like DE or RI (a small state). When it completes it is helpful to open this in say QGis/TileMill to see what the result looks like, and is right (e.g. test some blocks w/ the categories to make sure it worked).  This is advantageous, b/c the script takes a long time to run and you want to be right the first time.
 - If you have stopped the script for a certain number of states and want to rerun it later w/ other states, be sure to comment out the line 'mkOutTbl()' becuase this will erase all previous work.
 
-Generate Tiles
+Step 3 - Generate Tiles
 --------------
 - the [mapbox project](https://github.com/fccdata/cost_model_illustration/tree/master/visualization/cam_exp) has all the color values, zoom/opacity etc already set up.  it contains a connection to the postgres table created in Step 2.  One might have to modify that based on the table selection/postgres connection string values
 - to test that the tiles work the way you think, you can modify the mapbox project, and put a query on the table with the state_fips to only do one state and test the resutls
@@ -54,6 +54,21 @@ Here are the resulting colors and field values for the legend.
 <tr><td>Block is Not Served</td><td>Block has Price Cap and Rate of return costs BELOW the threshhold</td><td>6</td><td>#D99442</td></tr>
 <tr><td>N/A</td><td>Water</td><td>7</td><td>#DEEDEF</td></tr>
 </table>
+
+
+Step 4 - Export the data
+-----------------
+
+The export process re-assigns the above, between, and below values from the original source experiments table, excluding details which are proprietary to CostQuest. The experiments table includes additional records to those used to create the map tiles, where a census block is classified as greater than 50% water, but has locations in the model. These blocks are excluded for cartographic purposes on the maps, but are included here in the export file. To export the data, run [the sql statements](https://github.com/fccdata/cost_model_illustration/blob/master/processing/export_mapcsv.sql), which will create the export file, [cam_cost_map.csv](). Data definition to load is as follows:
+- state character varying(2)
+- county_name character varying(30)
+- geoid10 character varying(15)
+- tract character varying(11)
+- bb_served character varying(1)
+- cost_per_loc character varying(10)
+
+row count: 6,978,375
+
 
 
 
