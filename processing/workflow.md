@@ -59,7 +59,7 @@ Here are the resulting colors and field values for the legend.
 Step 4 - Export the data
 -----------------
 
-The export process re-assigns the above, between, and below values from the original source experiments table, excluding details which are proprietary to CostQuest. The experiments table includes additional records to those used to create the map tiles, where a census block is classified as greater than 50% water, but has locations in the model. These blocks are excluded for cartographic purposes on the maps, but are included here in the export file. To export the data, run [the sql statements](https://github.com/fccdata/cost_model_illustration/blob/master/processing/export_mapcsv.sql), which will create the export file, [cam_cost_map.csv](). Data definition to load is as follows:
+The export process re-assigns the above, between, and below values from the original source experiments table. The experiments table includes additional records to those used to create the map tiles, where a census block is classified as greater than 50% water, but has locations in the model. These blocks are excluded for cartographic purposes on the maps, but are included here in the export file. To export the data, run [the sql statements](https://github.com/fccdata/cost_model_illustration/blob/master/processing/export_mapcsv.sql), which will create the export file, [cam_cost_map.csv](). Data definition to load is as follows:
 - state character varying(2)
 - county_name character varying(30)
 - geoid10 character varying(15)
