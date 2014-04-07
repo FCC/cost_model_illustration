@@ -1,3 +1,8 @@
 title: CAM Cost Map
 
 baseurl: /cost_model_illustration
+
+markdown: kramdown
+
+kramdown:
+  auto_ids: true
